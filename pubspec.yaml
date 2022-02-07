@@ -87,3 +87,16 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+fonts:
+  - family: HotPizza
+    fonts:
+      - asset: assets/fonts/hotpizza.ttf
+        wheith: 300
+        style: normal
+  - family: PanPizza
+    fonts:
+      - asset: assets/fonts/panpizza.ttf
+        wheith: 300  
+        style: normal    
+assets:
+    - asset/images/pizza.png       
