@@ -11,29 +11,34 @@ class TopWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width,
       height: height,
-      child: Row(
-        children: const [
-          Text(
-            "Pizzaria \n  do Carlos",
-            style: TextStyle(
-              fontSize: 40,
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-              shadows: [
-                Shadow(
-                  color: Colors.black,
-                  blurRadius: 2.0,
-                  offset: Offset(4, 5),
-                )
-              ],
+      child: LayoutBuilder(builder: (context, constraints) {
+        return Row(
+          children: [
+            const Text(
+              "Pizzaria \n  do Carlos",
+              style: TextStyle(
+                fontSize: 35,
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontFamily: 'HotPizza',
+                shadows: [
+                  Shadow(
+                    color: Colors.black,
+                    blurRadius: 2.0,
+                    offset: Offset(3, 3),
+                  )
+                ],
+              ),
             ),
-          ),
-          LogoWidget()
-        ],
-      ),
+            LogoWidget(
+              size: constraints.maxWidth * 0.5,
+            )
+          ],
+        );
+      }),
     );
   }
 }

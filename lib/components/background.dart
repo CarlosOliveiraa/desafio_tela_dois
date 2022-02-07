@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
+import 'botton_background.dart';
+import 'login_widgets.dart';
 import 'top_widgets.dart';
 
 class BackGround extends StatelessWidget {
@@ -15,13 +17,30 @@ class BackGround extends StatelessWidget {
     ColorsApp colors = ColorsApp();
 
     return Container(
-      alignment: Alignment.center,
+      alignment: Alignment.topCenter,
       width: width,
       height: height,
       decoration: colors.bkDecoration,
       child: LayoutBuilder(builder: (context, constraints) {
-        return TopWidget(
-          width: constraints.maxWidth,
+        return Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(
+                left: constraints.maxWidth * 0.06,
+                top: constraints.maxHeight * 0.06,
+              ),
+              child: TopWidget(
+                width: constraints.maxWidth,
+              ),
+            ),
+            BottonBackGround(
+              width: constraints.maxWidth,
+              height: constraints.maxHeight * 0.66,
+              child: LoginWidgets(
+                width: constraints.maxWidth * 0.81,
+              ),
+            )
+          ],
         );
       }),
     );

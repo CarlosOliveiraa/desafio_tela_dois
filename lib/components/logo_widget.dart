@@ -10,10 +10,10 @@ class LogoWidget extends StatelessWidget {
     return Container(
       width: size,
       height: size,
-      decoration: const BoxDecoration(
+      decoration: const  BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("asset/images/pizza.png"),
-        ),
+          image: AssetImage('assets/images/pizza.png'),
+        )
       ),
     );
   }
