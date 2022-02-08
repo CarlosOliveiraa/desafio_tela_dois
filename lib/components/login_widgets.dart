@@ -33,6 +33,44 @@ class LoginWidgets extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(title, style: colors.style1),
+          TextFormField(
+            style: TextStyle(color: colors.thirdColor),
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              prefixIcon: Icon(
+                Icons.mail,
+                color: colors.thirdColor,
+              ),
+              labelStyle: TextStyle(
+                  color: colors.thirdColor, fontWeight: FontWeight.w600),
+              labelText: "E-mail",
+              hintText: "admin@gmail.com",
+              hintStyle: TextStyle(color: colors.thirdColor),
+              border: OutlineInputBorder(
+                borderSide: BorderSide(color: colors.thirdColor, width: 3.0),
+                borderRadius: BorderRadius.circular(40),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+              prefixIcon: Icon(
+                Icons.vpn_key,
+                color: colors.thirdColor,
+              ),
+              hintText: "123456",
+              hintStyle: TextStyle(color: colors.thirdColor),
+              labelText: "Senha",
+              labelStyle: TextStyle(
+                  color: colors.thirdColor, fontWeight: FontWeight.w600),
+              border: OutlineInputBorder(
+                  borderSide: BorderSide(style: BorderStyle.solid),
+                  borderRadius: BorderRadius.circular(40)),
+            ),
+          ),
           Text(
             info,
             style: TextStyle(

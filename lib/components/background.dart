@@ -16,33 +16,35 @@ class BackGround extends StatelessWidget {
   Widget build(BuildContext context) {
     ColorsApp colors = ColorsApp();
 
-    return Container(
-      alignment: Alignment.topCenter,
-      width: width,
-      height: height,
-      decoration: colors.bkDecoration,
-      child: LayoutBuilder(builder: (context, constraints) {
-        return Column(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(
-                left: constraints.maxWidth * 0.06,
-                top: constraints.maxHeight * 0.06,
+    return SingleChildScrollView(
+      child: Container(
+        alignment: Alignment.topCenter,
+        width: width,
+        height: height,
+        decoration: colors.bkDecoration,
+        child: LayoutBuilder(builder: (context, constraints) {
+          return Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                  left: constraints.maxWidth * 0.06,
+                  top: constraints.maxHeight * 0.06,
+                ),
+                child: TopWidget(
+                  width: constraints.maxWidth,
+                ),
               ),
-              child: TopWidget(
+              BottonBackGround(
                 width: constraints.maxWidth,
-              ),
-            ),
-            BottonBackGround(
-              width: constraints.maxWidth,
-              height: constraints.maxHeight * 0.66,
-              child: LoginWidgets(
-                width: constraints.maxWidth * 0.81,
-              ),
-            )
-          ],
-        );
-      }),
+                height: constraints.maxHeight * 0.66,
+                child: LoginWidgets(
+                  width: constraints.maxWidth * 0.81,
+                ),
+              )
+            ],
+          );
+        }),
+      ),
     );
   }
 }
