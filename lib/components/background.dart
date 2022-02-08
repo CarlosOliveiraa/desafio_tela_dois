@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../constants/colors.dart';
+import '../decorations/textFormField_decoration.dart';
 import 'botton_background.dart';
 import 'login_widgets.dart';
 import 'top_widgets.dart';
@@ -14,14 +15,14 @@ class BackGround extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ColorsApp colors = ColorsApp();
+    TextFormFieldDecoration customDecoration = TextFormFieldDecoration();
 
     return SingleChildScrollView(
       child: Container(
         alignment: Alignment.topCenter,
         width: width,
         height: height,
-        decoration: colors.bkDecoration,
+        decoration: customDecoration.bkDecoration,
         child: LayoutBuilder(builder: (context, constraints) {
           return Column(
             children: [
@@ -38,6 +39,9 @@ class BackGround extends StatelessWidget {
                 width: constraints.maxWidth,
                 height: constraints.maxHeight * 0.66,
                 child: LoginWidgets(
+                  title: "Registrar",
+                  info: "Registrar",
+                  action: "Bem Vindo",
                   width: constraints.maxWidth * 0.81,
                 ),
               )
