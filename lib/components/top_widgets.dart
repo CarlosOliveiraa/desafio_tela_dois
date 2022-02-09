@@ -17,14 +17,14 @@ class TopWidget extends StatelessWidget {
       child: LayoutBuilder(builder: (context, constraints) {
         return Row(
           children: [
-            const Text(
+            Text(
               "Pizzaria \n  do Carlos",
               style: TextStyle(
-                fontSize: 35,
+                fontSize: constraints.maxWidth * 0.07,
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
                 fontFamily: 'HotPizza',
-                shadows: [
+                shadows: const [
                   Shadow(
                     color: Colors.black,
                     blurRadius: 2.0,

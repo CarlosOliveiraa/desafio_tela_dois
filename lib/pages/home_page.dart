@@ -15,13 +15,9 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      body: Stack(
-        children: [
-          BackGround(
-            width: size.width,
-            height: size.height,
-          ),
-        ],
+      body: Container(
+        alignment: Alignment.center,
+        child: const Text("Você entrou"),
       ),
     );
   }

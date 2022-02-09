@@ -5,14 +5,14 @@ import '../components/botton_background.dart';
 import '../components/login_widgets.dart';
 import '../components/top_widgets.dart';
 
-class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+class SignUpPage extends StatefulWidget {
+  const SignUpPage({Key? key}) : super(key: key);
 
   @override
-  _SignInPageState createState() => _SignInPageState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _SignInPageState extends State<SignInPage> {
+class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -38,11 +38,12 @@ class _SignInPageState extends State<SignInPage> {
                 width: constraints.maxWidth,
                 height: constraints.maxHeight * 0.6,
                 child: LoginWidgets(
-                  page: Pages.signIn,
-                  title: "Entrar",
-                  info: "Entrar",
-                  action: "Registrar",
+                  page: Pages.signUp,
+                  title: "Registrar",
+                  info: "Registro",
+                  action: "Entrar",
                   width: constraints.maxWidth * 0.81,
+                  height: constraints.maxHeight * 0.72,
                 ),
               )
             ],

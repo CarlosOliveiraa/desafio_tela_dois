@@ -25,10 +25,6 @@ class BottonBackGround extends StatelessWidget {
           topLeft: Radius.circular(45),
           topRight: Radius.circular(45),
         ),
-        image: DecorationImage(
-            image: AssetImage('assets/images/pizza2.png'),
-            opacity: 0.25,
-            fit: BoxFit.fill),
       ),
     );
   }
